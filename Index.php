@@ -67,8 +67,18 @@ foreach($regs as $cur_regxp) {
 
 
 echo "<br>". $text;
-$explode = explode(" ", $text);
+$massiv_explode = explode(" ", $text);
 ?>
 <pre>
-    <?var_dump($explode);?>
+    <?var_dump($massiv_explode);?>
 </pre>
+<?
+    foreach ($massiv_explode as $item) {
+        $slog_explode = explode('-', $item);
+        var_dump($slog_explode);
+        echo "<br>";
+        echo $count_bezudahnih_slogov = count($slog_explode)-1;
+        echo "<br>";
+    }
+
+?>
